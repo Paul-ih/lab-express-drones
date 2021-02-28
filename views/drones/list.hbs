@@ -1,1 +1,9 @@
 <h2>Available drones</h2>
+  {{#forEach drone}}
+
+  <p>{{this.name}}</p>
+   <p>{{this.propellers}}</p>
+    <p>{{this.speed}}</p>
+  <a href="/bin/seeds.js{{this._id}}">See more</a>
+  
+{{/each}}

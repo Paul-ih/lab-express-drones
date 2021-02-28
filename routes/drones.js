@@ -5,8 +5,12 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/drones', (req, res, next) => {
-  // Iteration #2: List the drones
-  // ... your code here
+  {{#each drone}}
+
+  <p>{{this.name}}</p>
+  <a href="/bin/seeds.js{{this._id}}">See more</a>
+  
+{{/each}}
 });
 
 router.get('/drones/create', (req, res, next) => {
